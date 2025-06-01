@@ -1,0 +1,21 @@
+Package: Essential
+Type: Package
+Title: Prior Distribution over Essential Graphs and Metropolis Hastings Sampler
+Version: 1.0.0
+Author: John M. Noble
+Maintainer: The package maintainer <noble@mimuw.edu.pl>
+Description: This package generates essential graphs according to a 
+     probability distribution where assignment of vertices to chain components 
+     and assignment of chain components to layers are based on Chinese Restaurant 
+     processes with parameters theta and alpha respectively. A skeleton of edges 
+     is chosen at random to ensure the structure, extra edges are added according 
+     to an 'extra edge' parameter p.
+     A Metropolis Hastings sampler is available, whose state space is the 
+     space of essential graphs.
+License: none
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.2
