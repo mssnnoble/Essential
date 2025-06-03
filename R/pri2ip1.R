@@ -9,8 +9,6 @@
 #' @export
 
 pri2ip1 <- function(CG,p){
-  #
-
 i2ip1 = CG$DEi2ip1
 ordlay = as.list(CG$ordlay)
 CCs = CG$CC

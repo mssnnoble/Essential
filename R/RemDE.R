@@ -120,6 +120,7 @@ S = CG$CC[[w[2]]][CC2]
        NewCG$TOTPAR[[ln+1]] = sort(c(CG$CC[[w[2]]][KK1],oldpar))
        NewCG$DEex[[ln+1]] = setdiff(NewCG$TOTPAR[[ln+1]],NewCG$DEi2ip1[[ln+1]])
        NewCG = NEWLAY(NewCG)
+       NewCG = LEGMERGE(NewCG)
       }
 
 if(length(CC1)==0 & length(CC3)>=1)
@@ -153,6 +154,7 @@ for(j in 1:(ln-1))
   NewCG$TOTPAR[[j+a]] = sort(c(CG$TOTPAR[[w[2]]],CG$CC[[w[2]]][Par[[j]]]))
  }
 NewCG = NEWLAY(NewCG)
+NewCG = LEGMERGE(NewCG)
 
 
 
@@ -209,6 +211,7 @@ if(length(CC1)>=1 & length(CC3)>=1)
        }
   #note: TOTPARs have to be correct; NEWLAY doesn't use DEex or DEi2ip1
   NewCG = NEWLAY(NewCG)
+  NewCG = LEGMERGE(NewCG)
 
 }
 

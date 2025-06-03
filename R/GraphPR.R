@@ -20,9 +20,6 @@
 #' @export
 
 GraphPR <- function(GRAPH,theta,alpha,p){
-
-
-
 L <- list()
 CCs <- as.list(GRAPH$CC)
 s <- sapply(CCs,length)
