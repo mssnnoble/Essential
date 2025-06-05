@@ -6,9 +6,11 @@
 #' @param CCued - collection of undirected edge matrices for the CCs
 #' @param k - layer.
 #'
-#' @return a = c(1,k,i) if x is complete in layer k, CC labelled i
-#' @return a = c(0,0,0) if x is not complete
-#'
+#' @return
+#' \itemize{
+#' \item a = c(1,k,i) if x is complete in layer k, CC labelled i
+#' \item a = c(0,0,0) if x is not complete
+#' }
 #'@export
 
 checkcompletek <- function(x,CC,ordlay,CCued,k){

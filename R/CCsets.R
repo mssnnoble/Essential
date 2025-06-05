@@ -8,7 +8,8 @@
 #' @param CRP this is the list of table numbers for each vertex (customer)
 #'
 #'
-#' @return L - for each table, the customers at the table.
+#' @return
+#' L - for  table i, L[[i]] gives the customers at the table.
 #' @export
 
 

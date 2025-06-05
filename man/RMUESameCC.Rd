@@ -16,9 +16,11 @@ RMUESameCC(CG, x, v, w)
 \item{w}{- the CC}
 }
 \value{
-: Out
-Out$CG is the new essential graph
-Out$Ratio is the ratio between reverse and forward proposals
+: Out where
+\itemize{
+\item Out$CG is the new essential graph
+\item Out$Ratio is the ratio between reverse and forward proposals
+}
 }
 \description{
 Removes undirected edge where removal does not split the CC into two CCs

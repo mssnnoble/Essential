@@ -9,11 +9,15 @@
 #' @param N is the number of MCMC iterations
 #'
 #' @return
-#' OUT contains a list of N, each with three components
-#' OUT$CG is the essential graph (CG = chain graph)
-#' OUT$Post is the posterior score for the graph
-#' OUT$Prior is the prior graph probability
-#' OUT$Lik is the likelihood score
+#' OUT contains a list of N, each with the following components
+#' \itemize{
+#' \item OUT[[j]]$OldCG current graph (before proposal)
+#' \item OUT[[j]]$NewCG new graph
+#' \item OUT[[j]]$logLikelihood log of the likelihood score (missing 2 pi)
+#' \item OUT[[j]]$GraphScore log of probability of new graph
+#' \item OUT[[j]]$WholeScore sum of GraphScore and logLikelihood
+#' \item OUT[[j]]$move 1 if proposal accepted, 0 otherwise
+#'}
 #'
 #'@export
 
@@ -80,8 +84,7 @@ SamplerCovariance <- function(covar,n,N,theta,alpha,p)
     print(Out$move)
     print("i=")
     print(i)
-    save(MCOut, file="savedgraphs.Rda")
-    }
+     }
   MCOut <- MCOut[2:(N+1)]
 
 

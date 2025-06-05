@@ -6,8 +6,10 @@
 #' @param w - the CC
 #'
 #' @return: Out
-#' Out$CG is the new essential graph
-#' Out$Ratio is the ratio between reverse and forward proposals
+#' \itemize{
+#' \item Out$CG is the new essential graph
+#' \item Out$Ratio is the ratio between reverse and forward proposals
+#' }
 #'@export
 
 RMUE <- function(CG,x,v,w)

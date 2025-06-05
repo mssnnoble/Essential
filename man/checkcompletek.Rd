@@ -18,9 +18,10 @@ checkcompletek(x, CC, ordlay, CCued, k)
 \item{k}{- layer.}
 }
 \value{
-a = c(1,k,i) if x is complete in layer k, CC labelled i
-
-a = c(0,0,0) if x is not complete
+\itemize{
+\item a = c(1,k,i) if x is complete in layer k, CC labelled i
+\item a = c(0,0,0) if x is not complete
+}
 }
 \description{
 Checks if a set  in layer k is a complete set.

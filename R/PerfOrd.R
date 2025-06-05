@@ -5,8 +5,11 @@
 #' for a CONNECTED decomposable graph.
 #'
 #' @return PO
-#' PO[1,j] gives index of jth MC
-#' PO[2,j] gives index of MC that separates PO[1,j] from earlier MCs
+#' \itemize{
+#' \item PO[1,j] gives index of jth MC
+#' \item PO[2,j] gives index of MC that separates PO[1,j] from earlier MCs
+#' }
+#'
 #' @export
 
 perford <- function(J)

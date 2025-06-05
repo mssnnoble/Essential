@@ -17,11 +17,12 @@ form the new immoralities}
 \item{PointIn}{This is vertices into which arrows are pointing}
 }
 \value{
-Out$NewCC this gives a list of the new CCs generated when compelled
+\itemize{
+\item Out$NewCC this gives a list of the new CCs generated when compelled
 edges are appropriately directed
-
-Out$Par This gives a list of the additional parents (due to directing
+\item  Out$Par This gives a list of the additional parents (due to directing
 compelled edges)
+}
 }
 \description{
 After generating new immoralities by adding a directed edge and directing

@@ -10,7 +10,7 @@
 #' @param CCued list of all adjacency matrices for the CCs
 #' @param ordlay layering of the CCs
 #'
-#' @return a 1 if valid, 0 if not valid
+#' @return a which is 1 if valid, 0 if not valid
 #' @export
 
 

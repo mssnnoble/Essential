@@ -7,14 +7,15 @@
 #' @param p - extra edge parameter
 #'
 #' @return L
-#' L$PCCs probability of assignment of vertices to CCs
-#' L$PCCued vector, length is number of CCs, each entry is probability
+#' \itemize{
+#' \item L$PCCs probability of assignment of vertices to CCs
+#' \item L$PCCued vector, length is number of CCs, each entry is probability
 #' of edge configuration for the CC
-#' L$Pordlay probability of assignment of CCs to layers (conditioned on CCs)
-#' L$PDEi2ip1 vector, each entry is probability of one-layer-back parent sets
-#' L$PDEex vector, each entry is probability of two-or-more layer back
+#' \item L$Pordlay probability of assignment of CCs to layers (conditioned on CCs)
+#' \item L$PDEi2ip1 vector, each entry is probability of one-layer-back parent sets
+#' \item L$PDEex vector, each entry is probability of two-or-more layer back
 #' parent sets (conditioned on preceding probabilities)
-#'
+#'}
 #' All the numbers, when multiplied together, give the probability
 #' of the essential graph.
 #' @export

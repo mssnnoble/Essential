@@ -27,7 +27,7 @@ prCC <-function(CG,p){
   #e lists number of extra edges over and above spanning tree
 
   f <- rep(0,length(CCs))
-  if(length(ordlay[[1]]) == 1){f[ordlay[[1]][1]] = 1}
+  if(length(ordlay[[1]]) == 1 & length(ordlay)>=2){f[ordlay[[1]][1]] = 1}
   #f indicates if CC is required to be non-complete
 
   g <- function(j){dbinom(e[j], 0.5*(b[j]-1)*(b[j]-2)-f[j],p)}

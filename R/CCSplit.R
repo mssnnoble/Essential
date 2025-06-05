@@ -17,12 +17,14 @@
 #'
 #' @return
 #' Out where
-#'Out$CC2 lists all possible connected subsets containing y
-#'Out$CC1
-#'Out$CC3
-#'where Out$CC1[[j]], Out$CC2[[j]], Out$CC3[[j]] is jth
+#' \itemize{
+#' \item Out$CC2 lists all possible connected subsets containing y
+#' \item Out$CC1
+#' \item Out$CC3
+#' \item where (Out$CC1[[j]], Out$CC2[[j]], Out$CC3[[j]]) is jth
 #'possible split.
-#'Out$count gives number of ways.
+#' \item Out$count gives number of ways.
+#'}
 #'
 #'@export
 

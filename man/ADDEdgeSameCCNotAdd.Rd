@@ -17,8 +17,10 @@ ADDEdgeSameCCNotAdd(CG, x, v, w)
 }
 \value{
 Out where
-Out$CG gives new CG (after addition of edge)
-Out$Ratio gives ratio of forward to reverse proposals
+\itemize{
+\item Out$CG gives new CG (after addition of edge)
+\item Out$Ratio gives ratio of forward to reverse proposals
+}
 
 export
 }

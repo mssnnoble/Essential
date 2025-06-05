@@ -7,8 +7,10 @@
 #'
 #'
 #' @return O - list
-#' O$L where O$L[[x]] gives neighbours of x, not including x
-#' O$C where O$C[[x]] gives neighbours of x, including x
+#' \itemize{
+#' \item O$L where O$L[[x]] gives neighbours of x, not including x
+#' \item O$C where O$C[[x]] gives neighbours of x, including x
+#' }
 #' @export
 
 

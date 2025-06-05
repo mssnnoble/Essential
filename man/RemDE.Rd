@@ -18,10 +18,12 @@ different; v is a positive integer if both are in same layer}
 }
 \value{
 OUT contains a list where
-OUT$CG is the new essential graph (after x[1] -> S removed
+\itemize{
+\item OUT$CG is the new essential graph (after x[1] -> S removed
 S suitable subset of CC(w[2]))
-OUT$ratio is ratio of forward proposal probability divided by
+\item OUT$ratio is ratio of forward proposal probability divided by
 reverse proposal probability
+}
 }
 \description{
 deals with removing a directed edge from x[1] to S, subset CC(w[2]).

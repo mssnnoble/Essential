@@ -8,7 +8,7 @@
 #' @param q their layers
 #'
 #'
-#' @return a - new layering
+#' @return a - the new layering
 #' @export
 
 #we adjust the layers to ensure there is a suitable ground layer

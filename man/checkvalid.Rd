@@ -24,7 +24,7 @@ checkvalid(z, i, j, i2ip1, M, CC, CCued, ordlay)
 \item{ordlay}{layering of the CCs}
 }
 \value{
-a 1 if valid, 0 if not valid
+a which is 1 if valid, 0 if not valid
 }
 \description{
 Checks if a candidate set of extra parents is valid

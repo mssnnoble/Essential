@@ -11,10 +11,12 @@
 #'
 #' @return
 #' OUT contains a list where
-#' OUT$CG is the new essential graph (after x[1] -> S added
-#' S suitable subset of CC(w[2]))
-#' OUT$ratio is ratio of forward proposal probability divided by
+#' \itemize{
+#' \item OUT$CG is the new essential graph (after x[1] -> S added
+#' where S is a chosen subset of CC(w[2]))
+#' \item OUT$ratio is ratio of forward proposal probability divided by
 #' reverse proposal probability
+#'}
 #'
 #'@export
 

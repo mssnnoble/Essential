@@ -9,17 +9,19 @@
 #' @param d - number of vertices
 #'
 #' @return M
-#' M$CC assignment of vertices to chain components
-#' M$CCued lower triangular matrices, one for each CC
+#' \itemize{
+#' \item M$CC assignment of vertices to chain components
+#' \item M$CCued lower triangular matrices, one for each CC
 #'  where 1 denotes undirected edge
-#' M$ordlay list where M$ordlay[[j]] gives the CC labels for layer j
-#' M$VIL where M$VIL[[j]] gives list of vertices in layer j
-#' M$prVIL where M$prVIL[[j]] gives list of vertices from layers 1,...,j
-#' M$DEi2ip1 where  M$DEi2ip1[[j]] gives parents in layer i-1 if CC[[j]]
+#'  \item M$ordlay list where M$ordlay[[j]] gives the CC labels for layer j
+#' \item M$VIL where M$VIL[[j]] gives list of vertices in layer j
+#' \item M$prVIL where M$prVIL[[j]] gives list of vertices from layers 1,...,j
+#' \item M$DEi2ip1 where  M$DEi2ip1[[j]] gives parents in layer i-1 if CC[[j]]
 #' is in layer i.
-#' M$DEex where M$DEex[[j]] gives parents in layers 1,...,i-2 if CC[[j]]
+#'  \item M$DEex where M$DEex[[j]] gives parents in layers 1,...,i-2 if CC[[j]]
 #' is in layer i
-#' M$TOTPAR where M$TOTPAR[[j]] gives all parents of CC[[j]]
+#' \item M$TOTPAR where M$TOTPAR[[j]] gives all parents of CC[[j]]
+#'}
 #'
 #'@export
 

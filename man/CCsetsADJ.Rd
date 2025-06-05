@@ -12,7 +12,7 @@ CCsetsADJ(z, q)
 \item{q}{their layers}
 }
 \value{
-a - new layering
+a - the new layering
 }
 \description{
 This algorithm adjusts the layering to ensure that there exists a layer

@@ -11,16 +11,18 @@
 #' @param p is the edge probability for the prior
 #'
 #' @return
-#' OUT contains a list of N, each with three components
-#' OUT$OldCG is the input CG from the previous move
-#' OUT$NewCG is the important one - the new CG.
-#'   This is the proposal if the proposal is accepted
+#' OUT contains a list of N, each with the following components
+#' \itemize{
+#' \item OUT[[j]]$OldCG is the input CG from the previous move
+#' \item OUT[[j]]$NewCG is the important one - the new CG.
+#'   which is the proposal if the proposal is accepted
 #'   or the OldCG if the proposal is rejected
-#' OUT$RatioProp is the ratio P(NewCG -> OldCG)/P(OldCG -> NewCG)
-#'   numerator probability of proposing OldCG from new
-#'   denominator probability of proposing NewCG from old
-#'OUT$RatioGraphs is the ratio of the prior probabilities of new to old graphs
-#'OUT$Score is the prior probability of NewCG
+#' \item OUT[[j]]$RatioProp is   P(NewCG -> OldCG)/P(OldCG -> NewCG)
+#'   which is the ratio of probabilities of proposing old from new to new
+#'   from old
+#' \item OUT[[j]]$RatioGraphs is the ratio of the prior probabilities of new to old graphs
+#' \item OUT[[j]]$Score is the logaritm of the (prior) probability of NewCG
+#' }
 #'
 #'@export
 
@@ -35,22 +37,23 @@ MCOut <- list()
 MCOut[[1]] <- list()
 MCOut[[1]]$CG = CGinit
 MCOut[[1]]$NewCG = CGinit
-print(MCOut$CG)
 
 
 
-   for(i in 2:N)
+   for(i in 2:(N+1))
   {
      Out = list()
     CGPRPN <- MCMCmove(MCOut[[i-1]]$NewCG)
     CGOLD = CGPRPN$OldCG
     CGProp = CGPRPN$NewCG
     RatioProp = CGPRPN$Ratio
-    ScorePrev = prod(unlist(GraphPR(CGOLD,theta,alpha,p)))
-    ScoreNew = prod(unlist(GraphPR(CGProp,theta,alpha,p)))
+    ScorePrev = log(prod(unlist(GraphPR(CGOLD,theta,alpha,p))))
+    ScoreNew = log(prod(unlist(GraphPR(CGProp,theta,alpha,p))))
     RatioGraphs = (prod(unlist(GraphPR(CGProp,theta,alpha,p))))/(prod(unlist(GraphPR(CGOLD,theta,alpha,p))))
-    #R3 = CGprop$LikRat
+
     A = min(1,RatioProp*RatioGraphs)
+    if(is.nan(A)==TRUE)
+    {A=1}
     print(A)
     accept = runif(1,0,1)
 
@@ -58,7 +61,6 @@ print(MCOut$CG)
     Out$RatioProp = RatioProp
     Out$RatioGraphs = RatioGraphs
     Out$PropCG = CGProp
-    Out$x = x
 
     if(accept <= A)
    {
@@ -77,7 +79,7 @@ print(Out$move)
 print("i=")
 print(i)
    }
-
+MCOut <- MCOut[2:(N+1)]
 
  return(MCOut)
 

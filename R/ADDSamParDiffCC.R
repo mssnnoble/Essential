@@ -14,12 +14,13 @@
 #'
 #' @return
 #' OUT contains a list where
-#' OUT$CG is the new essential graph (after x[1] -> CC2 <- CC1 added
+#' \itemize{
+#' \item OUT$CG is the new essential graph (after x[1] -> CC2 <- CC1 added
 #' CC1 and CC2 suitable subsets of CC(w[2]) or undirected edge x[1]-x[2]
 #' has been added)
-#' OUT$Ratio is ratio of forward proposal probability divided by
+#'  \item OUT$Ratio is ratio of forward proposal probability divided by
 #' reverse proposal probability
-#'
+#'}
 #'
 #'@export
 
@@ -149,6 +150,7 @@ if(length(CC3)>=1)
   }
   #note: TOTPARs have to be correct; NEWLAY doesn't use DEex or DEi2ip1
   NewCG = NEWLAY(NewCG)
+  NewCG = LEGMERGE(NewCG)
 }
 }
 

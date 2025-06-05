@@ -11,9 +11,11 @@ MCMCmove(CG)
 }
 \value{
 Out  a list where
-Out$OldCG = CG (the original - input - essential graph)
-Out$NewCG <- NewCG (the proposed graph)
-Out$Ratio <- Ratio (ratio of reverse proposal to forward proposal)
+\itemize{
+\item Out$OldCG = CG (the original - input - essential graph)
+\item Out$NewCG <- NewCG (the proposed graph)
+\item Out$Ratio <- Ratio (ratio of reverse proposal to forward proposal)
+}
 }
 \description{
 Randomly selects two different vertices and computes a proposal.

@@ -12,10 +12,14 @@
 #' @param PointIn This is vertices into which arrows are pointing
 #'
 #'
-#' @return Out$NewCC this gives a list of the new CCs generated when compelled
+#' @return
+#' \itemize{
+#' \item Out$NewCC this gives a list of the new CCs generated when compelled
 #' edges are appropriately directed
-#' @return Out$Par This gives a list of the additional parents (due to directing
+#' \item  Out$Par This gives a list of the additional parents (due to directing
 #' compelled edges)
+#' }
+#'
 #' @export
 
 

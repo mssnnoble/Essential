@@ -10,7 +10,7 @@ CCsets(CRP)
 \item{CRP}{this is the list of table numbers for each vertex (customer)}
 }
 \value{
-L - for each table, the customers at the table.
+L - for  table i, L[[i]] gives the customers at the table.
 }
 \description{
 This algorithm generates the list of customers at each table

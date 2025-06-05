@@ -3,10 +3,11 @@
 #' @param CG an essential graph object
 #'
 #' @return Out  a list where
-#' Out$OldCG = CG (the original - input - essential graph)
-#' Out$NewCG <- NewCG (the proposed graph)
-#' Out$Ratio <- Ratio (ratio of reverse proposal to forward proposal)
-#'
+#' \itemize{
+#' \item Out$OldCG = CG (the original - input - essential graph)
+#' \item Out$NewCG <- NewCG (the proposed graph)
+#' \item Out$Ratio <- Ratio (ratio of reverse proposal to forward proposal)
+#'}
 #'
 #'@export
 
@@ -94,7 +95,6 @@ z = sort(y,decreasing = TRUE)
 if(CG$CCued[[w]][z[1],z[2]]==1)
 {
    #hence there is an undirected edge
-  print("RMUE")
   NEW = RMUE(CG,x,v,w)
   NewCG = NEW$CG
   Ratio = NEW$Ratio

@@ -18,16 +18,18 @@ Sampler(N, d, theta, alpha, p)
 \item{p}{is the edge probability for the prior}
 }
 \value{
-OUT contains a list of N, each with three components
-OUT$OldCG is the input CG from the previous move
-OUT$NewCG is the important one - the new CG.
-  This is the proposal if the proposal is accepted
+OUT contains a list of N, each with the following components
+\itemize{
+\item OUT[[j]]$OldCG is the input CG from the previous move
+\item OUT[[j]]$NewCG is the important one - the new CG.
+  which is the proposal if the proposal is accepted
   or the OldCG if the proposal is rejected
-OUT$RatioProp is the ratio P(NewCG -> OldCG)/P(OldCG -> NewCG)
-  numerator probability of proposing OldCG from new
-  denominator probability of proposing NewCG from old
-OUT$RatioGraphs is the ratio of the prior probabilities of new to old graphs
-OUT$Score is the prior probability of NewCG
+\item OUT[[j]]$RatioProp is   P(NewCG -> OldCG)/P(OldCG -> NewCG)
+  which is the ratio of probabilities of proposing old from new to new
+  from old
+\item OUT[[j]]$RatioGraphs is the ratio of the prior probabilities of new to old graphs
+\item OUT[[j]]$Score is the logaritm of the (prior) probability of NewCG
+}
 }
 \description{
 This algorithm simply runs a Metropolis Hastings sampler through essential

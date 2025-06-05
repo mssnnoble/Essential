@@ -18,11 +18,13 @@ different; v is a positive integer if both are in same layer}
 }
 \value{
 OUT contains a list where
-OUT$CG is the new essential graph (after x[1] -> CC2 <- CC1 added
+\itemize{
+\item OUT$CG is the new essential graph (after x[1] -> CC2 <- CC1 added
 CC1 and CC2 suitable subsets of CC(w[2]) or undirected edge x[1]-x[2]
 has been added)
-OUT$Ratio is ratio of forward proposal probability divided by
+ \item OUT$Ratio is ratio of forward proposal probability divided by
 reverse proposal probability
+}
 }
 \description{
 deals with adding edge (directed or undirected) when x[1] and x[2] are from

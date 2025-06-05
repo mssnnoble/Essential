@@ -19,12 +19,14 @@
 #'
 #' @return
 #' Out where
-#'Out$CC2 lists all possibilities for CC2
-#'Out$CC1 lists all possiblilities for CC1
-#'Out$CC3 list of sets of remaining vertices
-#'where Out$CC1[[j]], Out$CC2[[j]], Out$CC3[[j]] is jth
+#' \itemize{
+#' \item Out$CC2 lists all possibilities for CC2
+#' \item Out$CC1 lists all possiblilities for CC1
+#' \item Out$CC3 list of sets of remaining vertices
+#' \item where (Out$CC1[[j]], Out$CC2[[j]], Out$CC3[[j]]) is jth
 #'possible split.
-#'Out$count gives number of ways.
+#' \item Out$count gives number of ways.
+#' }
 #'
 #'@export
 
